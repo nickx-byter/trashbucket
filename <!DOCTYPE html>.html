@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ecolixo</title>
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+}
+
+/* HEADER */
+
+header{
+    background:#1B4332;
+    padding:20px 60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* LOGO */
+
+.logo{
+    width:160px;
+    height:60px;
+
+    background:#DFF5E1;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#1B4332;
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* MENU */
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#95D5B2;
+}
+
+/* HERO */
+
+.hero{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+    margin-bottom:50px;
+}
+
+/* ÁREA DO CELULAR */
+
+.area-celular{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* CELULAR */
+
+.celular{
+    position:relative;
+
+    width:280px;
+    height:560px;
+
+    background:#222;
+    border-radius:40px;
+
+    border:10px solid #111;
+
+    box-shadow:0 0 25px rgba(0,0,0,0.2);
+}
+
+/* TELA */
+
+.tela{
+    position:absolute;
+
+    width:90%;
+    height:88%;
+
+    background:white;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%, -50%);
+
+    border-radius:25px;
+
+    overflow:hidden;
+}
+
+/* PEÇAS */
+
+.peca{
+    position:absolute;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* HOVER */
+
+.peca:hover{
+    background:rgba(46,139,87,0.35);
+}
+
+/* TELA */
+
+.tela-peca{
+    width:80%;
+    height:22%;
+
+    top:8%;
+    left:10%;
+}
+
+/* CÂMERA */
+
+.camera{
+    width:25%;
+    height:10%;
+
+    top:3%;
+    left:37%;
+}
+
+/* PLACA */
+
+.placa{
+    width:70%;
+    height:22%;
+
+    top:38%;
+    left:15%;
+}
+
+/* BATERIA */
+
+.bateria{
+    width:65%;
+    height:20%;
+
+    bottom:12%;
+    left:17%;
+}
+
+/* TOOLTIP */
+
+.info{
+    position:absolute;
+
+    background:#1B4332;
+    color:white;
+
+    padding:10px;
+    border-radius:10px;
+
+    width:180px;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:0.3s;
+
+    font-size:14px;
+}
+
+/* MOSTRAR INFO */
+
+.peca:hover .info{
+    opacity:1;
+}
+
+/* POSIÇÕES DAS INFOS */
+
+.tela-peca .info{
+    top:-80px;
+    left:0;
+}
+
+.camera .info{
+    top:-80px;
+    left:-40px;
+}
+
+.placa .info{
+    right:-200px;
+    top:0;
+}
+
+.bateria .info{
+    left:-200px;
+    top:0;
+}
+
+/* SEÇÃO EXTRA */
+
+.cards{
+    padding:80px 20px;
+
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:300px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h2{
+    color:#2E8B57;
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1B4332;
+
+    color:white;
+
+    text-align:center;
+
+    padding:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        SUA LOGO
+    </div>
+
+    <nav>
+        <a href="">Início</a>
+        <a href="">Obsolescência</a>
+        <a href="">Reciclagem</a>
+        <a href="">Descarte</a>
+        <a href="">Contato</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <h1>Obsolescência Programada</h1>
+
+    <p>
+        Entenda como aparelhos eletrônicos são descartados rapidamente
+        e como a reciclagem correta pode ajudar o meio ambiente.
+    </p>
+
+    <!-- CELULAR -->
+
+    <div class="area-celular">
+
+        <div class="celular">
+
+            <div class="tela">
+
+                <!-- TELA -->
+
+                <div class="peca tela-peca">
+
+                    <div class="info">
+                        <strong>Tela</strong><br>
+                        Responsável pela exibição das imagens do aparelho.
+                    </div>
+
+                </div>
+
+                <!-- CÂMERA -->
+
+                <div class="peca camera">
+
+                    <div class="info">
+                        <strong>Câmera</strong><br>
+                        Contém sensores e materiais reutilizáveis.
+                    </div>
+
+                </div>
+
+                <!-- PLACA -->
+
+                <div class="peca placa">
+
+                    <div class="info">
+                        <strong>Placa-Mãe</strong><br>
+                        Possui cobre, ouro e outros metais recicláveis.
+                    </div>
+
+                </div>
+
+                <!-- BATERIA -->
+
+                <div class="peca bateria">
+
+                    <div class="info">
+                        <strong>Bateria</strong><br>
+                        Contém lítio e precisa de descarte correto.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CARDS -->
+
+<section class="cards">
+
+    <div class="card">
+
+        <h2>O que é?</h2>
+
+        <p>
+            A obsolescência programada reduz a vida útil dos aparelhos.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Problemas</h2>
+
+        <p>
+            O descarte incorreto gera poluição e aumenta o lixo eletrônico.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Soluções</h2>
+
+        <p>
+            Reciclagem e reutilização ajudam a preservar o meio ambiente.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    Projeto Ecolixo © 2026
+
+</footer>
+
+</body>
+</html>
