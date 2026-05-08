@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecolixo - Obsolescência</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+}
+header{
+    background:#1B4332;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.logo{
+    width:180px;
+    height:60px;
+    background:#DFF5E1;
+    border-radius:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1B4332;
+    font-weight:800;
+    font-size:22px;
+}
+nav{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+    padding:5px 0;
+    border-bottom:2px solid transparent;
+}
+nav a:hover, nav a.ativo{
+    color:#A8E6B0;
+    border-bottom-color:#95D5B2;
+}
+.hero{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.6;
+    font-size:1.1rem;
+}
+.cards{
+    padding:60px 30px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+.card{
+    width:300px;
+    background:white;
+    padding:30px 25px;
+    border-radius:28px;
+    box-shadow:0 12px 24px rgba(0,0,0,0.06);
+    transition:0.25s;
+}
+.card:hover{
+    transform:translateY(-6px);
+}
+.card h2{
+    color:#2E6B47;
+    margin-bottom:18px;
+    font-size:1.8rem;
+}
+.destaque{
+    max-width:900px;
+    margin:20px auto;
+    background:#EFF7EC;
+    border-radius:36px;
+    padding:35px;
+    text-align:center;
+}
+.btn-verde{
+    background:#2E8B57;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:bold;
+    margin-top:20px;
+    cursor:pointer;
+    display:inline-block;
+}
+footer{
+    background:#1B4332;
+    color:#CFEED6;
+    text-align:center;
+    padding:28px;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">TRASHBUCKET</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="obsolescencia.html" class="ativo">Obsolescência</a>
+        <a href="reciclagem.html">Reciclagem</a>
+        <a href="descarte.html">Descarte</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>⏳ Obsolescência Programada</h1>
+    <p>Entenda as estratégias que tornam seus dispositivos "lentos" ou obsoletos rapidamente e como se proteger.</p>
+</section>
+
+<div class="cards">
+    <div class="card"><h2>📉 Planejada</h2><p>Produtos com tempo de vida artificialmente reduzido. Famoso em lâmpadas e smartphones.</p></div>
+    <div class="card"><h2>📱 Perceptual</h2><p>Quando o software para de atualizar, o usuário sente necessidade de trocar aparelho mesmo funcionando.</p></div>
+    <div class="card"><h2>⚙️ Econômica</h2><p>Conserto caro ou falta de peças força substituição precoce, aumentando lixo eletrônico.</p></div>
+</div>
+
+<div class="destaque">
+    <h3 style="color:#1B4332;">📊 Brasil gera mais de 2 milhões de toneladas de lixo eletrônico por ano</h3>
+    <p style="margin-top:15px;">Apenas 3% são reciclados adequadamente. Cada aparelho descartado no aterro libera chumbo, mercúrio e cádmio no meio ambiente por décadas.</p>
+    <div class="btn-verde" onclick="alert('📘 Dica: Prefira eletrônicos com certificação de reparabilidade. Apoie o movimento Direito ao Reparo!')">Saiba como minimizar</div>
+</div>
+
+<footer>
+    Projeto Ecolixo © 2026 — Consciência ambiental para um futuro sustentável
+</footer>
+</body>
+</html>

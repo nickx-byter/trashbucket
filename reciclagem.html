@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecolixo - Reciclagem</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+}
+header{
+    background:#1B4332;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.logo{
+    width:180px;
+    height:60px;
+    background:#DFF5E1;
+    border-radius:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1B4332;
+    font-weight:800;
+    font-size:22px;
+}
+nav{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+    padding:5px 0;
+    border-bottom:2px solid transparent;
+}
+nav a:hover, nav a.ativo{
+    color:#A8E6B0;
+    border-bottom-color:#95D5B2;
+}
+.hero{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.6;
+    font-size:1.1rem;
+}
+.reciclagem-box{
+    background:#E9F5EC;
+    border-radius:48px;
+    max-width:1100px;
+    margin:40px auto;
+    padding:40px 30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+    align-items:center;
+}
+.step{
+    background:white;
+    border-radius:32px;
+    padding:20px;
+    width:220px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,0.05);
+}
+.step span{
+    background:#1B4332;
+    color:white;
+    width:40px;
+    height:40px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:60px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+.info-box{
+    background:white;
+    max-width:850px;
+    margin:20px auto 40px;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:0 5px 14px rgba(0,0,0,0.05);
+}
+.btn-verde{
+    background:#2E8B57;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block;
+}
+footer{
+    background:#1B4332;
+    color:#CFEED6;
+    text-align:center;
+    padding:28px;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo"> TRASHBUCKET</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="obsolescencia.html">Obsolescência</a>
+        <a href="reciclagem.html" class="ativo">Reciclagem</a>
+        <a href="descarte.html">Descarte</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>♻️ Reciclagem Eletrônica</h1>
+    <p>Transforme resíduos em recursos. Processo correto extrai metais valiosos e evita contaminação.</p>
+</section>
+
+<div class="reciclagem-box">
+    <div class="step"><span>1</span><strong>Coleta Seletiva</strong><p>Pontos de entrega voluntária (PEVs) recebem eletrônicos.</p></div>
+    <div class="step"><span>2</span><strong>Triagem</strong><p>Separação de componentes: baterias, placas, plásticos.</p></div>
+    <div class="step"><span>3</span><strong>Trituração</strong><p>Moinho fragmenta materiais e separa metais por densidade.</p></div>
+    <div class="step"><span>4</span><strong>Refino</strong><p>Extração de ouro, cobre, alumínio e plástico reciclado.</p></div>
+</div>
+
+<div class="info-box">
+    <h3 style="color:#1B4332; margin-bottom:12px;">🔋 Benefícios diretos:</h3>
+    <ul style="margin-left:30px; line-height:1.7;">
+        <li>Redução da extração de minérios (preservação de biomas)</li>
+        <li>Geração de empregos verdes na cadeia de reciclagem</li>
+        <li>Evita vazamento de substâncias tóxicas no lençol freático</li>
+        <li>Reaproveitamento de terras raras (ítrio, neodímio)</li>
+    </ul>
+    <div style="margin-top:25px; text-align:center;">
+        <div class="btn-verde" onclick="alert('🔍 Encontre pontos de coleta: acesse e-cycle.com.br ou consulte sua prefeitura. Grandes redes possuem programas gratuitos de recolhimento.')">Encontre pontos de coleta perto de você</div>
+    </div>
+</div>
+
+<footer>
+    Projeto Ecolixo © 2026 — Consciência ambiental para um futuro sustentável
+</footer>
+</body>
+</html>

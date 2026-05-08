@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecolixo - Consciência Eletrônica</title>
+<style>
+
+/* RESET & BASE */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header{
+    background:#1B4332;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* LOGO */
+.logo{
+    width:180px;
+    height:60px;
+    background:#DFF5E1;
+    border-radius:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1B4332;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:1px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    cursor:default;
+}
+
+/* MENU NAVEGAÇÃO */
+nav{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:1rem;
+    transition:0.2s;
+    padding:5px 0;
+    border-bottom:2px solid transparent;
+}
+
+nav a:hover, nav a.ativo{
+    color:#A8E6B0;
+    border-bottom-color:#95D5B2;
+}
+
+/* CONTEÚDO PÁGINAS DINÂMICO */
+.pagina{
+    display:none;
+    animation:fadeIn 0.4s ease;
+}
+
+.pagina.ativa{
+    display:block;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(8px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* HERO (usado em várias páginas) */
+.hero{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+    font-weight:800;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.6;
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+
+/* ÁREA DO CELULAR */
+.area-celular{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:30px 0 20px;
+}
+.celular{
+    position:relative;
+    width:280px;
+    height:560px;
+    background:#222;
+    border-radius:40px;
+    border:10px solid #111;
+    box-shadow:0 20px 35px rgba(0,0,0,0.3);
+}
+.tela{
+    position:absolute;
+    width:90%;
+    height:88%;
+    background:#ffffff;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:inset 0 0 0 2px rgba(0,0,0,0.05);
+}
+/* PEÇAS */
+.peca{
+    position:absolute;
+    cursor:pointer;
+    transition:0.2s;
+    border-radius:12px;
+    background:rgba(46,139,86,0.05);
+    border:1px dashed rgba(46,139,86,0);
+}
+.peca:hover{
+    background:rgba(46,139,87,0.25);
+    border-color:#2E8B57;
+}
+/* posições interativas */
+.tela-peca{
+    width:78%;
+    height:22%;
+    top:8%;
+    left:11%;
+    border-radius:16px;
+}
+.camera{
+    width:22%;
+    height:9%;
+    top:3%;
+    left:39%;
+    border-radius:30px;
+}
+.placa{
+    width:68%;
+    height:20%;
+    top:37%;
+    left:16%;
+}
+.bateria{
+    width:62%;
+    height:18%;
+    bottom:12%;
+    left:19%;
+}
+/* TOOLTIP custom */
+.info{
+    position:absolute;
+    background:#1B4332;
+    color:white;
+    padding:10px 14px;
+    border-radius:16px;
+    width:190px;
+    opacity:0;
+    pointer-events:none;
+    transition:0.2s ease;
+    font-size:13px;
+    z-index:200;
+    box-shadow:0 8px 18px rgba(0,0,0,0.2);
+    backdrop-filter:blur(2px);
+    font-weight:normal;
+}
+.peca:hover .info{
+    opacity:1;
+    transform:scale(1);
+}
+/* posições individuais info */
+.tela-peca .info{
+    top:-75px;
+    left:-20px;
+}
+.camera .info{
+    top:-70px;
+    left:-30px;
+}
+.placa .info{
+    right:-210px;
+    top:0px;
+}
+.bateria .info{
+    left:-210px;
+    top:-5px;
+}
+/* CARDS genérico */
+.cards{
+    padding:60px 30px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+.card{
+    width:300px;
+    background:white;
+    padding:30px 25px;
+    border-radius:28px;
+    box-shadow:0 12px 24px rgba(0,0,0,0.06);
+    transition:0.25s;
+    border:1px solid #e2f0e5;
+}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 28px rgba(0,0,0,0.1);
+}
+.card h2{
+    color:#2E6B47;
+    margin-bottom:18px;
+    font-size:1.8rem;
+}
+.card p{
+    line-height:1.5;
+    color:#2d3e2f;
+}
+/* Botão de ação */
+.btn-verde{
+    background:#2E8B57;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:bold;
+    margin-top:20px;
+    cursor:pointer;
+    transition:0.2s;
+    font-size:1rem;
+    display:inline-block;
+}
+.btn-verde:hover{
+    background:#1B5E3F;
+    transform:scale(1.02);
+}
+/* Seção reciclagem infográfico */
+.reciclagem-box{
+    background:#E9F5EC;
+    border-radius:48px;
+    max-width:1100px;
+    margin:40px auto;
+    padding:40px 30px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:30px;
+    justify-content:center;
+    align-items:center;
+}
+.step{
+    background:white;
+    border-radius:32px;
+    padding:20px;
+    width:220px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,0.05);
+}
+.step span{
+    background:#1B4332;
+    color:white;
+    width:40px;
+    height:40px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:60px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+/* Descarte tabela */
+.tabela-descarte{
+    max-width:800px;
+    margin:40px auto;
+    background:white;
+    border-radius:32px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+.tabela-descarte table{
+    width:100%;
+    border-collapse:collapse;
+}
+.tabela-descarte th, .tabela-descarte td{
+    padding:16px 20px;
+    text-align:left;
+    border-bottom:1px solid #DDEADE;
+}
+.tabela-descarte th{
+    background:#1B4332;
+    color:white;
+    font-weight:600;
+}
+.tabela-descarte tr:last-child td{
+    border-bottom:none;
+}
+/* Contato form */
+.form-contato{
+    max-width:650px;
+    margin:40px auto;
+    background:white;
+    padding:40px;
+    border-radius:40px;
+    box-shadow:0 12px 28px rgba(0,0,0,0.05);
+}
+.form-contato input, .form-contato textarea{
+    width:100%;
+    padding:14px 18px;
+    margin:10px 0 20px;
+    border:1.5px solid #cfe3d4;
+    border-radius:60px;
+    font-size:1rem;
+    transition:0.2s;
+}
+.form-contato textarea{
+    border-radius:24px;
+    resize:vertical;
+}
+.form-contato button{
+    background:#1B4332;
+    width:100%;
+    padding:14px;
+    border-radius:60px;
+    color:white;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+}
+footer{
+    background:#1B4332;
+    color:#CFEED6;
+    text-align:center;
+    padding:28px;
+    margin-top:40px;
+    font-size:0.9rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">♻️ ECOLIXO</div>
+    <nav id="menu-principal">
+        <a href="#" data-page="inicio" class="nav-link ativo">Início</a>
+        <a href="#" data-page="obsolescencia" class="nav-link">Obsolescência</a>
+        <a href="#" data-page="reciclagem" class="nav-link">Reciclagem</a>
+        <a href="#" data-page="descarte" class="nav-link">Descarte</a>
+        <a href="#" data-page="contato" class="nav-link">Contato</a>
+    </nav>
+</header>
+
+<!-- PÁGINA INÍCIO -->
+<div id="pagina-inicio" class="pagina ativa">
+    <section class="hero">
+        <h1>♻️ Consumo Consciente + Tecnologia</h1>
+        <p>Descubra como a obsolescência programada afeta o planeta. Aprenda a reciclar e descartar eletrônicos de forma correta. Faça parte da mudança!</p>
+        <!-- CELULAR INTERATIVO -->
+        <div class="area-celular">
+            <div class="celular">
+                <div class="tela">
+                    <div class="peca tela-peca">
+                        <div class="info"><strong>📱 Tela</strong><br>OLED/IPS, contém terras raras. Reciclagem evita acúmulo de materiais tóxicos.</div>
+                    </div>
+                    <div class="peca camera">
+                        <div class="info"><strong>📸 Câmera</strong><br>Lentes de vidro e sensores de silício. Reaproveitáveis em novos dispositivos.</div>
+                    </div>
+                    <div class="peca placa">
+                        <div class="info"><strong>🔌 Placa-Mãe</strong><br>Cobre, estanho, ouro. Extração responsável reduz mineração ilegal.</div>
+                    </div>
+                    <div class="peca bateria">
+                        <div class="info"><strong>🔋 Bateria</strong><br>Lítio e cobalto. Jamais descarte no lixo comum — pontos de coleta específicos.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p style="font-size:0.9rem; margin-top:15px;">🔍 Passe o mouse sobre as peças do celular para ver informações de reciclagem!</p>
+    </section>
+    <div class="cards">
+        <div class="card"><h2>🌍 O que é?</h2><p>Obsolescência programada reduz vida útil de produtos para incentivar consumo. Impacto ambiental gigantesco.</p></div>
+        <div class="card"><h2>⚠️ Problemas</h2><p>Lixo eletrônico cresce 5% ao ano. Substâncias tóxicas contaminam solo e água.</p></div>
+        <div class="card"><h2>💡 Soluções</h2><p>Reciclagem, reuso de componentes e legislação mais rígida. Pequenas atitudes geram grande mudança.</p></div>
+    </div>
+</div>
+
+<!-- PÁGINA OBSOLESCÊNCIA -->
+<div id="pagina-obsolescencia" class="pagina">
+    <section class="hero">
+        <h1>⏳ Obsolescência Programada</h1>
+        <p>Entenda as estratégias que tornam seus dispositivos "lentos" ou obsoletos rapidamente e como se proteger.</p>
+    </section>
+    <div class="cards" style="padding-top:0;">
+        <div class="card"><h2>📉 Planejada</h2><p>Produtos com tempo de vida artificialmente reduzido. Famoso em lâmpadas e smartphones.</p></div>
+        <div class="card"><h2>📱 Perceptual</h2><p>Quando o software para de atualizar, o usuário sente necessidade de trocar aparelho mesmo funcionando.</p></div>
+        <div class="card"><h2>⚙️ Econômica</h2><p>Conserto caro ou falta de peças força substituição precoce, aumentando lixo eletrônico.</p></div>
+    </div>
+    <div style="max-width:900px; margin:20px auto; background:#EFF7EC; border-radius:36px; padding:35px; text-align:center;">
+        <h3 style="color:#1B4332;">📊 Brasil gera mais de 2 milhões de toneladas de lixo eletrônico por ano</h3>
+        <p style="margin-top:15px;">Apenas 3% são reciclados adequadamente. Cada aparelho descartado no aterro libera chumbo, mercúrio e cádmio no meio ambiente por décadas.</p>
+        <div class="btn-verde" id="saibaMaisBtn">Saiba como minimizar</div>
+    </div>
+</div>
+
+<!-- PÁGINA RECICLAGEM -->
+<div id="pagina-reciclagem" class="pagina">
+    <section class="hero">
+        <h1>♻️ Reciclagem Eletrônica</h1>
+        <p>Transforme resíduos em recursos. Processo correto extrai metais valiosos e evita contaminação.</p>
+    </section>
+    <div class="reciclagem-box">
+        <div class="step"><span>1</span><strong>Coleta Seletiva</strong><p>Pontos de entrega voluntária (PEVs) recebem eletrônicos.</p></div>
+        <div class="step"><span>2</span><strong>Triagem</strong><p>Separação de componentes: baterias, placas, plásticos.</p></div>
+        <div class="step"><span>3</span><strong>Trituração</strong><p>Moinho fragmenta materiais e separa metais por densidade.</p></div>
+        <div class="step"><span>4</span><strong>Refino</strong><p>Extração de ouro, cobre, alumínio e plástico reciclado.</p></div>
+    </div>
+    <div style="background:white; max-width:850px; margin:20px auto 40px; border-radius:30px; padding:30px; box-shadow:0 5px 14px rgba(0,0,0,0.05);">
+        <h3 style="color:#1B4332; margin-bottom:12px;">🔋 Benefícios diretos:</h3>
+        <ul style="margin-left:30px; line-height:1.7;">
+            <li>Redução da extração de minérios (preservação de biomas)</li>
+            <li>Geração de empregos verdes na cadeia de reciclagem</li>
+            <li>Evita vazamento de substâncias tóxicas no lençol freático</li>
+            <li>Reaproveitamento de terras raras (ítrio, neodímio)</li>
+        </ul>
+        <div style="margin-top:25px; text-align:center;"><span class="btn-verde" id="mapaReciclagem">Encontre pontos de coleta perto de você</span></div>
+    </div>
+</div>
+
+<!-- PÁGINA DESCARTE -->
+<div id="pagina-descarte" class="pagina">
+    <section class="hero">
+        <h1>🗑️ Descarte Consciente</h1>
+        <p>Saiba onde e como descartar cada tipo de resíduo eletrônico. Evite multas e danos ambientais.</p>
+    </section>
+    <div class="tabela-descarte">
+        <table>
+            <thead>
+                <tr><th>Componente</th><th>Onde descartar</th><th>Cuidados especiais</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>📱 Celular / Tablet</td><td>Loja de operadora, coleta eletrônica municipal</td><td>Remova dados pessoais</td></tr>
+                <tr><td>🔋 Baterias de lítio</td><td>Pontos de coleta (supermercados, assistências)</td><td>Nunca jogue no lixo comum – risco de incêndio</td></tr>
+                <tr><td>💻 Notebooks / Computadores</td><td>Ecopontos, empresas de recapacitação</td><td>HD pode ser destruído ou limpo com software</td></tr>
+                <tr><td>🖨️ Impressoras / Periféricos</td><td>Cooperativas de reciclagem</td><td>Cartuchos de tinta têm circuito contaminante</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align:center; margin: 20px 0 40px;">
+        <div class="btn-verde" id="dicaDescarte">📢 DICA: Nunca descarte pilhas ou baterias no lixo orgânico</div>
+    </div>
+</div>
+
+<!-- PÁGINA CONTATO -->
+<div id="pagina-contato" class="pagina">
+    <section class="hero">
+        <h1>📬 Fale com o Ecolixo</h1>
+        <p>Dúvidas, parcerias ou sugestões sobre reciclagem de eletrônicos. Respondemos em até 2 dias úteis.</p>
+    </section>
+    <div class="form-contato">
+        <form id="formContatoEco">
+            <label>Nome completo</label>
+            <input type="text" id="nomeContato" placeholder="Seu nome" required>
+            <label>E-mail</label>
+            <input type="email" id="emailContato" placeholder="seu@email.com" required>
+            <label>Mensagem</label>
+            <textarea rows="4" placeholder="Conte sobre sua dúvida ambiental ou sugestão de parceria..."></textarea>
+            <button type="submit" class="btn-verde" style="background:#2E8B57;">Enviar mensagem 🌱</button>
+            <p id="feedbackMsg" style="margin-top:15px; font-size:0.85rem; text-align:center;"></p>
+        </form>
+    </div>
+</div>
+
+<footer>
+    Projeto Ecolixo © 2026 — Consciência ambiental para um futuro sustentável | Recicle, repense, reduza.
+</footer>
+
+<script>
+    // CONTROLE DE PÁGINAS (Navegação SPA)
+    const pages = {
+        inicio: document.getElementById('pagina-inicio'),
+        obsolescencia: document.getElementById('pagina-obsolescencia'),
+        reciclagem: document.getElementById('pagina-reciclagem'),
+        descarte: document.getElementById('pagina-descarte'),
+        contato: document.getElementById('pagina-contato')
+    };
+    
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    function activatePage(pageId) {
+        // esconde todas as páginas
+        Object.values(pages).forEach(page => {
+            if(page) page.classList.remove('ativa');
+        });
+        if(pages[pageId]) pages[pageId].classList.add('ativa');
+        // atualiza classe ativo nos links
+        navLinks.forEach(link => {
+            const linkPage = link.getAttribute('data-page');
+            if(linkPage === pageId) {
+                link.classList.add('ativo');
+            } else {
+                link.classList.remove('ativo');
+            }
+        });
+        // scroll suave para topo ao trocar página
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const page = this.getAttribute('data-page');
+            if(page && pages[page]) activatePage(page);
+        });
+    });
+    
+    // alguns botões interativos extras (com alerta informativo ou redirecionamento simbólico)
+    const saibaMaisBtn = document.getElementById('saibaMaisBtn');
+    if(saibaMaisBtn) {
+        saibaMaisBtn.addEventListener('click', () => {
+            alert("📘 Dica prática: Prefira eletrônicos com certificação de reparabilidade. Apoie o movimento 'direito ao reparo' (Right to Repair). Aumente a vida útil dos seus dispositivos trocando baterias e usando substituição de peças!");
+        });
+    }
+    
+    const mapaReciclagem = document.getElementById('mapaReciclagem');
+    if(mapaReciclagem) {
+        mapaReciclagem.addEventListener('click', () => {
+            alert("🔍 Encontre pontos de coleta de eletrônicos: Acesse o site 'e-cycle.com.br' ou pesquise 'Ecoponto mais próximo' na sua prefeitura. Grandes redes como Via Varejo, Samsung e Apple possuem programas gratuitos de recolhimento.");
+        });
+    }
+    
+    const dicaDescarte = document.getElementById('dicaDescarte');
+    if(dicaDescarte){
+        dicaDescarte.addEventListener('click', () => {
+            alert("📦 Armazene baterias danificadas em recipientes não metálicos. Leve até um posto de coleta autorizado. Alguns municípios oferecem coleta itinerante de resíduos eletrônicos.");
+        });
+    }
+    
+    // Formulário de contato com validação e feedback (não envia para servidor real mas simula)
+    const formContato = document.getElementById('formContatoEco');
+    const feedbackSpan = document.getElementById('feedbackMsg');
+    if(formContato){
+        formContato.addEventListener('submit', function(e){
+            e.preventDefault();
+            const nome = document.getElementById('nomeContato')?.value.trim();
+            const email = document.getElementById('emailContato')?.value.trim();
+            const mensagem = formContato.querySelector('textarea')?.value.trim();
+            if(!nome || !email || !mensagem){
+                if(feedbackSpan) feedbackSpan.innerText = '❌ Por favor, preencha todos os campos.';
+                feedbackSpan.style.color = '#b33';
+                setTimeout(() => { if(feedbackSpan) feedbackSpan.innerText = ''; }, 2500);
+                return;
+            }
+            if(!email.includes('@') || !email.includes('.')){
+                if(feedbackSpan) feedbackSpan.innerText = '📧 Digite um e-mail válido.';
+                feedbackSpan.style.color = '#b33';
+                setTimeout(() => { if(feedbackSpan) feedbackSpan.innerText = ''; }, 2500);
+                return;
+            }
+            if(feedbackSpan){
+                feedbackSpan.innerText = '✓ Mensagem enviada com sucesso! A Ecolixo retorna em breve. 🌿';
+                feedbackSpan.style.color = '#2E8B57';
+            }
+            formContato.reset();
+            setTimeout(() => { if(feedbackSpan) feedbackSpan.innerText = ''; }, 4000);
+        });
+    }
+    
+    // pequeno efeito tooltip nas peças já existe no CSS, mas podemos adicionar um alert extra nas áreas interativas do celular, mas sem exageros
+    // Adicional: garantir que o hover das peças mostre info sem conflito.
+    // função para destacar que as peças são interativas (apenas visual)
+    const pecas = document.querySelectorAll('.peca');
+    pecas.forEach(peca => {
+        peca.addEventListener('click', () => {
+            // apenas para fins educativos exibe informação complementar (sem quebrar)
+            const infoText = peca.querySelector('.info')?.innerText || 'Componente reciclável';
+            alert(`🔧 Componente: ${infoText.split('\n')[0]}\n♻️ Recicle corretamente!`);
+        });
+    });
+    
+    // Caso a página de início tenha o celular com informações atualizadas — tudo OK.
+    // Corrigir também a orientação do info da placa e bateria sem cortes (ajuste responsivo garantido)
+    // Pequeno ajuste responsivo para telas pequenas que as infos não saiam da tela
+    function ajusteInfoMobile(){
+        if(window.innerWidth < 650){
+            const allInfos = document.querySelectorAll('.info');
+            allInfos.forEach(info => {
+                if(info.closest('.placa')) info.style.right = '-180px';
+                if(info.closest('.bateria')) info.style.left = '-180px';
+            });
+        } else {
+            const allInfos = document.querySelectorAll('.info');
+            allInfos.forEach(info => {
+                if(info.closest('.placa')) info.style.right = '-210px';
+                if(info.closest('.bateria')) info.style.left = '-210px';
+            });
+        }
+    }
+    window.addEventListener('resize', ajusteInfoMobile);
+    ajusteInfoMobile();
+    
+    // Adicionando fallback se algum ID não existir: garantia extra
+    // A página contato inicial ativa corretamente.
+    // Linkagem de páginas via histórico não necessária, mas tudo navegável.
+    // Assegurar que o início já destaca a primeira página
+    if(!window.location.hash){
+        activatePage('inicio');
+    }
+    
+    // configurar também menu para manter estado
+    // validação extra: botão de exemplo na reciclagem mostra infos adicionais
+</script>
+</body>
+</html>

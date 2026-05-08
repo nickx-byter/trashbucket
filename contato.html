@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecolixo - Contato</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+}
+header{
+    background:#1B4332;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.logo{
+    width:180px;
+    height:60px;
+    background:#DFF5E1;
+    border-radius:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1B4332;
+    font-weight:800;
+    font-size:22px;
+}
+nav{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+    padding:5px 0;
+    border-bottom:2px solid transparent;
+}
+nav a:hover, nav a.ativo{
+    color:#A8E6B0;
+    border-bottom-color:#95D5B2;
+}
+.hero{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.6;
+    font-size:1.1rem;
+}
+/* Formulário */
+.form-contato{
+    max-width:650px;
+    margin:40px auto 30px;
+    background:white;
+    padding:40px;
+    border-radius:40px;
+    box-shadow:0 12px 28px rgba(0,0,0,0.05);
+}
+.form-contato input, .form-contato textarea{
+    width:100%;
+    padding:14px 18px;
+    margin:10px 0 20px;
+    border:1.5px solid #cfe3d4;
+    border-radius:60px;
+    font-size:1rem;
+}
+.form-contato textarea{
+    border-radius:24px;
+    resize:vertical;
+}
+.form-contato button{
+    background:#1B4332;
+    width:100%;
+    padding:14px;
+    border-radius:60px;
+    color:white;
+    font-weight:bold;
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+    transition:0.2s;
+}
+.form-contato button:hover{
+    background:#2E8B57;
+}
+/* SEÇÃO EQUIPE / CRIADORES */
+.equipe{
+    max-width:1100px;
+    margin:40px auto;
+    padding:0 20px;
+}
+.equipe h2{
+    text-align:center;
+    color:#1B4332;
+    font-size:32px;
+    margin-bottom:15px;
+}
+.subtitulo-equipe{
+    text-align:center;
+    color:#4a6b5a;
+    margin-bottom:40px;
+    font-size:1rem;
+}
+.cards-equipe{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+.membro{
+    background:white;
+    width:260px;
+    padding:30px 20px;
+    border-radius:32px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border:1px solid #e0ecd9;
+}
+.membro:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 30px rgba(0,0,0,0.12);
+}
+.avatar{
+    width:100px;
+    height:100px;
+    background:#D9F0DF;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:48px;
+    color:#1B4332;
+}
+.membro h3{
+    color:#1B4332;
+    font-size:22px;
+    margin-bottom:5px;
+}
+.cargo{
+    color:#2E8B57;
+    font-weight:600;
+    margin-bottom:12px;
+    font-size:14px;
+}
+.descricao{
+    color:#555;
+    font-size:14px;
+    line-height:1.5;
+    margin-bottom:15px;
+}
+.social-icons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:10px;
+}
+.social-icons a{
+    color:#2E6B47;
+    text-decoration:none;
+    font-size:20px;
+    transition:0.2s;
+}
+.social-icons a:hover{
+    color:#1B4332;
+    transform:scale(1.1);
+}
+footer{
+    background:#1B4332;
+    color:#CFEED6;
+    text-align:center;
+    padding:28px;
+    margin-top:40px;
+}
+.separador{
+    width:80px;
+    height:4px;
+    background:#95D5B2;
+    margin:20px auto;
+    border-radius:5px;
+}
+@media (max-width:700px){
+    header{
+        padding:20px 30px;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">TRASHBUCKET</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="obsolescencia.html">Obsolescência</a>
+        <a href="reciclagem.html">Reciclagem</a>
+        <a href="descarte.html">Descarte</a>
+        <a href="contato.html" class="ativo">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>📬 Fale com o Ecolixo</h1>
+    <p>Dúvidas, parcerias ou sugestões sobre reciclagem de eletrônicos. Respondemos em até 2 dias úteis.</p>
+</section>
+
+<div class="form-contato">
+    <form id="formContato">
+        <label>Nome completo</label>
+        <input type="text" id="nome" placeholder="Seu nome" required>
+        <label>E-mail</label>
+        <input type="email" id="email" placeholder="seu@email.com" required>
+        <label>Mensagem</label>
+        <textarea id="mensagem" rows="4" placeholder="Conte sobre sua dúvida ambiental ou sugestão de parceria..."></textarea>
+        <button type="submit">Enviar mensagem 🌱</button>
+        <p id="feedback" style="margin-top:15px; font-size:0.85rem; text-align:center;"></p>
+    </form>
+</div>
+
+<!-- SEÇÃO CRIADORES / EQUIPE -->
+<div class="equipe">
+    <h2>🌟 Nossa Equipe</h2>
+    <div class="separador"></div>
+    <p class="subtitulo-equipe">Conheça as pessoas por trás do projeto Ecolixo</p>
+    
+    <div class="cards-equipe">
+        <!-- Membro 1 -->
+        <div class="membro">
+            <div class="avatar">👩‍💻</div>
+            <h3>Ana Beatriz Silva</h3>
+            <div class="cargo">🌱 Idealizadora & Designer</div>
+            <p class="descricao">Criadora do conceito Ecolixo, responsável pela experiência visual e conscientização sobre lixo eletrônico.</p>
+            <div class="social-icons">
+                <a href="#">📧</a>
+                <a href="#">💼</a>
+                <a href="#">🔗</a>
+            </div>
+        </div>
+        
+        <!-- Membro 2 -->
+        <div class="membro">
+            <div class="avatar">👨‍🔧</div>
+            <h3>Rafael Mendes</h3>
+            <div class="cargo">♻️ Pesquisador & Conteúdo</div>
+            <p class="descricao">Especialista em resíduos eletrônicos, responsável pelas informações técnicas e parcerias sustentáveis.</p>
+            <div class="social-icons">
+                <a href="#">📧</a>
+                <a href="#">💼</a>
+                <a href="#">🔗</a>
+            </div>
+        </div>
+        
+        <!-- Membro 3 -->
+        <div class="membro">
+            <div class="avatar">👩‍🎨</div>
+            <h3>Carla Oliveira</h3>
+            <div class="cargo">🖥️ Desenvolvedora Front-end</div>
+            <p class="descricao">Arquiteta da interface interativa e da experiência com o celular animado, apaixonada por tecnologia verde.</p>
+            <div class="social-icons">
+                <a href="#">📧</a>
+                <a href="#">💼</a>
+                <a href="#">🔗</a>
+            </div>
+        </div>
+        
+        <!-- Membro 4 -->
+        <div class="membro">
+            <div class="avatar">🌿</div>
+            <h3>Lucas Andrade</h3>
+            <div class="cargo">📢 Comunicação & Redes</div>
+            <p class="descricao">Divulga ações de reciclagem e conecta o projeto a iniciativas comunitárias e escolas.</p>
+            <div class="social-icons">
+                <a href="#">📧</a>
+                <a href="#">💼</a>
+                <a href="#">🔗</a>
+            </div>
+        </div>
+    </div>
+    
+    <div style="text-align:center; margin-top:45px; background:#E5F4E8; border-radius:28px; padding:25px; max-width:600px; margin-left:auto; margin-right:auto;">
+        <p style="font-weight:bold; color:#1B4332;">💚 Projeto desenvolvido para conscientização ambiental</p>
+        <p style="font-size:14px; margin-top:8px;">Ecolixo © 2026 — Junte-se a nós na luta contra o descarte irregular de eletrônicos</p>
+    </div>
+</div>
+
+<footer>
+    Projeto Ecolixo © 2026 — Consciência ambiental para um futuro sustentável
+</footer>
+
+<script>
+    const form = document.getElementById('formContato');
+    const feedback = document.getElementById('feedback');
+    
+    if(form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+            
+            if(!nome || !email || !mensagem) {
+                feedback.innerText = '❌ Por favor, preencha todos os campos.';
+                feedback.style.color = '#b33';
+                setTimeout(() => feedback.innerText = '', 2500);
+                return;
+            }
+            if(!email.includes('@') || !email.includes('.')) {
+                feedback.innerText = '📧 Digite um e-mail válido.';
+                feedback.style.color = '#b33';
+                setTimeout(() => feedback.innerText = '', 2500);
+                return;
+            }
+            
+            feedback.innerText = '✓ Mensagem enviada com sucesso! A Ecolixo retorna em breve. 🌿';
+            feedback.style.color = '#2E8B57';
+            form.reset();
+            setTimeout(() => feedback.innerText = '', 4000);
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecolixo - Início</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+}
+header{
+    background:#1B4332;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.05);
+}
+.logo{
+    width:180px;
+    height:60px;
+    background:#DFF5E1;
+    border-radius:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1B4332;
+    font-weight:800;
+    font-size:22px;
+    letter-spacing:1px;
+    cursor:default;
+}
+nav{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    font-size:1rem;
+    transition:0.2s;
+    padding:5px 0;
+    border-bottom:2px solid transparent;
+}
+nav a:hover, nav a.ativo{
+    color:#A8E6B0;
+    border-bottom-color:#95D5B2;
+}
+.hero{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+    font-weight:800;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.6;
+    margin-bottom:30px;
+    font-size:1.1rem;
+}
+.area-celular{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:30px 0 20px;
+    position:relative;
+}
+.celular{
+    position:relative;
+    width:280px;
+    height:560px;
+    background:#222;
+    border-radius:40px;
+    border:10px solid #111;
+    box-shadow:0 20px 35px rgba(0,0,0,0.3);
+}
+.tela{
+    position:absolute;
+    width:90%;
+    height:88%;
+    background:#ffffff;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+    border-radius:25px;
+    overflow:visible;
+}
+.peca{
+    position:absolute;
+    cursor:pointer;
+    transition:0.2s;
+    border-radius:12px;
+    background:rgba(46,139,86,0.05);
+    border:1px dashed rgba(46,139,86,0);
+}
+.peca:hover{
+    background:rgba(46,139,87,0.25);
+    border-color:#2E8B57;
+}
+.tela-peca{
+    width:78%;
+    height:22%;
+    top:8%;
+    left:11%;
+    border-radius:16px;
+}
+.camera{
+    width:22%;
+    height:9%;
+    top:3%;
+    left:39%;
+    border-radius:30px;
+}
+.placa{
+    width:68%;
+    height:20%;
+    top:37%;
+    left:16%;
+}
+.bateria{
+    width:62%;
+    height:18%;
+    bottom:12%;
+    left:19%;
+}
+/* TOOLTIP CORRIGIDO - AGORA APARECE COMPLETO */
+.info{
+    position:fixed;
+    background:#1B4332;
+    color:white;
+    padding:12px 16px;
+    border-radius:16px;
+    width:220px;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:0.2s ease;
+    font-size:13px;
+    z-index:1000;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    line-height:1.5;
+    backdrop-filter:blur(2px);
+    font-weight:normal;
+}
+.peca:hover .info{
+    opacity:1;
+    visibility:visible;
+}
+/* POSIÇÕES AJUSTADAS COM JAVASCRIPT PARA SEMPRE FICAR NA TELA */
+.cards{
+    padding:60px 30px;
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    flex-wrap:wrap;
+}
+.card{
+    width:300px;
+    background:white;
+    padding:30px 25px;
+    border-radius:28px;
+    box-shadow:0 12px 24px rgba(0,0,0,0.06);
+    transition:0.25s;
+    border:1px solid #e2f0e5;
+}
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 28px rgba(0,0,0,0.1);
+}
+.card h2{
+    color:#2E6B47;
+    margin-bottom:18px;
+    font-size:1.8rem;
+}
+footer{
+    background:#1B4332;
+    color:#CFEED6;
+    text-align:center;
+    padding:28px;
+    margin-top:40px;
+}
+/* Responsivo */
+@media (max-width: 768px){
+    .hero h1{
+        font-size:32px;
+    }
+    header{
+        padding:20px 30px;
+    }
+    .info{
+        width:200px;
+        font-size:12px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">TRASHBUCKET</div>
+    <nav>
+        <a href="index.html" class="ativo">Início</a>
+        <a href="obsolescencia.html">Obsolescência</a>
+        <a href="reciclagem.html">Reciclagem</a>
+        <a href="descarte.html">Descarte</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>♻️ Consumo Consciente + Tecnologia</h1>
+    <p>Descubra como a obsolescência programada afeta o planeta. Aprenda a reciclar e descartar eletrônicos de forma correta. Faça parte da mudança!</p>
+    
+    <div class="area-celular">
+        <div class="celular">
+            <div class="tela">
+                <div class="peca tela-peca">
+                    <div class="info"><strong>📱 Tela</strong><br>OLED/IPS, contém terras raras. Reciclagem evita acúmulo de materiais tóxicos. O vidro e os polímeros podem ser reaproveitados.</div>
+                </div>
+                <div class="peca camera">
+                    <div class="info"><strong>📸 Câmera</strong><br>Lentes de vidro e sensores de silício. Reaproveitáveis em novos dispositivos. Contém pequenas quantidades de ouro nas conexões.</div>
+                </div>
+                <div class="peca placa">
+                    <div class="info"><strong>🔌 Placa-Mãe</strong><br>Cobre, estanho, ouro e prata. Extração responsável reduz mineração ilegal. Componentes como capacitores também são recicláveis.</div>
+                </div>
+                <div class="peca bateria">
+                    <div class="info"><strong>🔋 Bateria</strong><br>Lítio e cobalto. Jamais descarte no lixo comum — pontos de coleta específicos. Risco de explosão se danificada.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="font-size:0.9rem; margin-top:15px;">🔍 Passe o mouse sobre as peças do celular para ver informações de reciclagem!</p>
+</section>
+
+<div class="cards">
+    <div class="card"><h2>🌍 O que é?</h2><p>Obsolescência programada reduz vida útil de produtos para incentivar consumo. Impacto ambiental gigantesco.</p></div>
+    <div class="card"><h2>⚠️ Problemas</h2><p>Lixo eletrônico cresce 5% ao ano. Substâncias tóxicas contaminam solo e água.</p></div>
+    <div class="card"><h2>💡 Soluções</h2><p>Reciclagem, reuso de componentes e legislação mais rígida. Pequenas atitudes geram grande mudança.</p></div>
+</div>
+
+<footer>
+    Projeto Ecolixo © 2026 — Consciência ambiental para um futuro sustentável
+</footer>
+
+<script>
+    // Função para posicionar os tooltips dinamicamente, garantindo que fiquem totalmente visíveis na tela
+    function posicionarTooltips() {
+        const pecas = document.querySelectorAll('.peca');
+        
+        pecas.forEach(peca => {
+            const tooltip = peca.querySelector('.info');
+            if (!tooltip) return;
+            
+            // Remove qualquer estilo inline anterior
+            tooltip.style.top = '';
+            tooltip.style.left = '';
+            tooltip.style.right = '';
+            tooltip.style.bottom = '';
+            
+            // Função que será chamada ao passar o mouse
+            peca.addEventListener('mouseenter', function(e) {
+                // Pega a posição da peça
+                const rect = peca.getBoundingClientRect();
+                const tooltipRect = tooltip.getBoundingClientRect();
+                
+                // Largura real do tooltip (já que está visibility hidden, precisamos calcular)
+                const tooltipWidth = tooltip.offsetWidth;
+                const tooltipHeight = tooltip.offsetHeight;
+                
+                // Posições possíveis: acima, abaixo, direita, esquerda
+                let topPos, leftPos;
+                
+                // Tentar posicionar acima primeiro
+                if (rect.top - tooltipHeight - 10 > 0) {
+                    // Cabe acima
+                    topPos = rect.top - tooltipHeight - 8;
+                    leftPos = rect.left + (rect.width / 2) - (tooltipWidth / 2);
+                    
+                    // Ajustar se sair da borda esquerda
+                    if (leftPos < 10) leftPos = 10;
+                    // Ajustar se sair da borda direita
+                    if (leftPos + tooltipWidth > window.innerWidth - 10) {
+                        leftPos = window.innerWidth - tooltipWidth - 10;
+                    }
+                } 
+                // Tentar abaixo
+                else if (rect.bottom + tooltipHeight + 10 < window.innerHeight) {
+                    topPos = rect.bottom + 8;
+                    leftPos = rect.left + (rect.width / 2) - (tooltipWidth / 2);
+                    if (leftPos < 10) leftPos = 10;
+                    if (leftPos + tooltipWidth > window.innerWidth - 10) {
+                        leftPos = window.innerWidth - tooltipWidth - 10;
+                    }
+                }
+                // Tentar direita
+                else if (rect.right + tooltipWidth + 10 < window.innerWidth) {
+                    topPos = rect.top + (rect.height / 2) - (tooltipHeight / 2);
+                    leftPos = rect.right + 8;
+                    if (topPos < 10) topPos = 10;
+                    if (topPos + tooltipHeight > window.innerHeight - 10) {
+                        topPos = window.innerHeight - tooltipHeight - 10;
+                    }
+                }
+                // Tentar esquerda
+                else if (rect.left - tooltipWidth - 10 > 0) {
+                    topPos = rect.top + (rect.height / 2) - (tooltipHeight / 2);
+                    leftPos = rect.left - tooltipWidth - 8;
+                    if (topPos < 10) topPos = 10;
+                    if (topPos + tooltipHeight > window.innerHeight - 10) {
+                        topPos = window.innerHeight - tooltipHeight - 10;
+                    }
+                }
+                // Último recurso: centralizar na tela
+                else {
+                    topPos = window.innerHeight / 2 - tooltipHeight / 2;
+                    leftPos = window.innerWidth / 2 - tooltipWidth / 2;
+                }
+                
+                tooltip.style.position = 'fixed';
+                tooltip.style.top = topPos + 'px';
+                tooltip.style.left = leftPos + 'px';
+                tooltip.style.right = 'auto';
+                tooltip.style.bottom = 'auto';
+            });
+            
+            // Opcional: limpar ao sair (não necessário, mas mantém organização)
+            peca.addEventListener('mouseleave', function() {
+                tooltip.style.position = 'fixed';
+                // Não precisa resetar, mas deixamos como está
+            });
+        });
+    }
+    
+    // Adiciona também clique para dispositivos touch
+    const pecas = document.querySelectorAll('.peca');
+    pecas.forEach(peca => {
+        peca.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const tooltip = peca.querySelector('.info');
+            if (tooltip) {
+                // Para touch, mostramos o tooltip temporariamente
+                tooltip.style.opacity = '1';
+                tooltip.style.visibility = 'visible';
+                
+                // Posiciona dinamicamente para o clique também
+                const rect = peca.getBoundingClientRect();
+                const tooltipWidth = tooltip.offsetWidth;
+                const tooltipHeight = tooltip.offsetHeight;
+                let topPos, leftPos;
+                
+                if (rect.top - tooltipHeight - 10 > 0) {
+                    topPos = rect.top - tooltipHeight - 8;
+                    leftPos = rect.left + (rect.width / 2) - (tooltipWidth / 2);
+                    if (leftPos < 10) leftPos = 10;
+                    if (leftPos + tooltipWidth > window.innerWidth - 10) {
+                        leftPos = window.innerWidth - tooltipWidth - 10;
+                    }
+                } else if (rect.bottom + tooltipHeight + 10 < window.innerHeight) {
+                    topPos = rect.bottom + 8;
+                    leftPos = rect.left + (rect.width / 2) - (tooltipWidth / 2);
+                    if (leftPos < 10) leftPos = 10;
+                    if (leftPos + tooltipWidth > window.innerWidth - 10) {
+                        leftPos = window.innerWidth - tooltipWidth - 10;
+                    }
+                } else if (rect.right + tooltipWidth + 10 < window.innerWidth) {
+                    topPos = rect.top + (rect.height / 2) - (tooltipHeight / 2);
+                    leftPos = rect.right + 8;
+                    if (topPos < 10) topPos = 10;
+                    if (topPos + tooltipHeight > window.innerHeight - 10) {
+                        topPos = window.innerHeight - tooltipHeight - 10;
+                    }
+                } else {
+                    topPos = window.innerHeight / 2 - tooltipHeight / 2;
+                    leftPos = window.innerWidth / 2 - tooltipWidth / 2;
+                }
+                
+                tooltip.style.position = 'fixed';
+                tooltip.style.top = topPos + 'px';
+                tooltip.style.left = leftPos + 'px';
+                
+                setTimeout(() => {
+                    tooltip.style.opacity = '0';
+                    tooltip.style.visibility = 'hidden';
+                }, 3000);
+            }
+        });
+    });
+    
+    // Inicializar posicionamento
+    posicionarTooltips();
+    
+    // Reaplicar quando a tela for redimensionada
+    window.addEventListener('resize', function() {
+        // Esconde todos os tooltips abertos
+        document.querySelectorAll('.info').forEach(t => {
+            t.style.opacity = '0';
+            t.style.visibility = 'hidden';
+        });
+        posicionarTooltips();
+    });
+</script>
+</body>
+</html>

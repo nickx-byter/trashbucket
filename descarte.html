@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecolixo - Descarte</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+body{
+    background:#F5F7F2;
+    color:#2B2B2B;
+}
+header{
+    background:#1B4332;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+.logo{
+    width:180px;
+    height:60px;
+    background:#DFF5E1;
+    border-radius:40px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#1B4332;
+    font-weight:800;
+    font-size:22px;
+}
+nav{
+    display:flex;
+    gap:35px;
+    flex-wrap:wrap;
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+    padding:5px 0;
+    border-bottom:2px solid transparent;
+}
+nav a:hover, nav a.ativo{
+    color:#A8E6B0;
+    border-bottom-color:#95D5B2;
+}
+.hero{
+    text-align:center;
+    padding:60px 20px 40px;
+}
+.hero h1{
+    font-size:45px;
+    margin-bottom:20px;
+    color:#1B4332;
+}
+.hero p{
+    max-width:750px;
+    margin:auto;
+    line-height:1.6;
+    font-size:1.1rem;
+}
+.tabela-descarte{
+    max-width:800px;
+    margin:40px auto;
+    background:white;
+    border-radius:32px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.05);
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+th, td{
+    padding:16px 20px;
+    text-align:left;
+    border-bottom:1px solid #DDEADE;
+}
+th{
+    background:#1B4332;
+    color:white;
+    font-weight:600;
+}
+tr:last-child td{
+    border-bottom:none;
+}
+.btn-verde{
+    background:#2E8B57;
+    color:white;
+    border:none;
+    padding:12px 28px;
+    border-radius:40px;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block;
+}
+footer{
+    background:#1B4332;
+    color:#CFEED6;
+    text-align:center;
+    padding:28px;
+    margin-top:40px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">TRASHBUCKET</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="obsolescencia.html">Obsolescência</a>
+        <a href="reciclagem.html">Reciclagem</a>
+        <a href="descarte.html" class="ativo">Descarte</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>🗑️ Descarte Consciente</h1>
+    <p>Saiba onde e como descartar cada tipo de resíduo eletrônico. Evite multas e danos ambientais.</p>
+</section>
+
+<div class="tabela-descarte">
+    <table>
+        <thead>
+            <tr><th>Componente</th><th>Onde descartar</th><th>Cuidados especiais</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>📱 Celular / Tablet</td><td>Loja de operadora, coleta eletrônica municipal</td><td>Remova dados pessoais</td></tr>
+            <tr><td>🔋 Baterias de lítio</td><td>Pontos de coleta (supermercados, assistências)</td><td>Nunca jogue no lixo comum – risco de incêndio</td></tr>
+            <tr><td>💻 Notebooks / Computadores</td><td>Ecopontos, empresas de recapacitação</td><td>HD pode ser destruído ou limpo com software</td></tr>
+            <tr><td>🖨️ Impressoras / Periféricos</td><td>Cooperativas de reciclagem</td><td>Cartuchos de tinta têm circuito contaminante</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div style="text-align:center; margin: 20px 0 40px;">
+    <div class="btn-verde" onclick="alert('📦 Armazene baterias danificadas em recipientes não metálicos. Leve até um posto de coleta autorizado. Nunca descarte pilhas ou baterias no lixo orgânico!')">📢 DICA: Nunca descarte pilhas ou baterias no lixo comum</div>
+</div>
+
+<footer>
+    Projeto Ecolixo © 2026 — Consciência ambiental para um futuro sustentável
+</footer>
+</body>
+</html>
