@@ -1,0 +1,205 @@
+CONTEÚDO DO SITE - OBSOLESCÊNCIA PROGRAMADA
+
+PÁGINA 1 - HOME (Início)
+
+TÍTULO:
+O Impacto da Obsolescência Programada no Meio Ambiente
+
+SUBTÍTULO:
+Produtos feitos para durar menos. Lixo eletrônico que cresce sem parar. Entenda o problema e o que você pode fazer.
+
+
+O PROBLEMA EM NÚMEROS:
+
+- 53,6 milhões de toneladas de lixo eletrônico geradas no mundo em 2019
+- Brasil é o 5o maior gerador do mundo, mais de 2,1 milhões de toneladas por ano
+- Apenas 17,4% do lixo eletrônico global é reciclado corretamente
+- Os materiais desperdiçados valem estimados US$ 57 bilhões por ano
+
+POR QUE ISSO ACONTECE?
+
+A maioria dos eletrônicos que usamos foi projetada para durar menos do que poderia. Essa prática tem nome: obsolescência programada. Ela garante lucro para as empresas e gera um dos maiores problemas ambientais do século.
+
+Neste site você vai entender como esse ciclo funciona, o que acontece com os eletrônicos descartados e como agir de forma responsável.
+
+
+PÁGINA 2 - OBSOLESCÊNCIA PROGRAMADA
+
+O QUE É?
+
+Obsolescência programada é quando um produto é projetado intencionalmente para parar de funcionar, ficar lento ou parecer ultrapassado antes do necessário, forçando o consumidor a comprar um novo.
+
+Não é defeito. É uma escolha.
+
+DE ONDE VEIO ESSA IDEIA?
+
+Em 1924, os maiores fabricantes de lâmpadas do mundo formaram um cartel secreto e decidiram reduzir a vida útil das lâmpadas de 2.500 para 1.000 horas. Havia tecnologia para fazer durar mais, a decisão foi econômica. Esse foi o primeiro caso documentado de obsolescência programada, e a lógica se espalhou para praticamente todos os setores industriais.
+
+OS TIPOS DE OBSOLESCÊNCIA:
+
+TÉCNICA: o produto para de funcionar
+- Baterias seladas que degradam e não podem ser trocadas
+- Impressoras com contador interno que travam após X páginas
+- Peças de reposição descontinuadas poucos anos após o lançamento
+
+POR SOFTWARE: o sistema torna o aparelho lento
+- Atualizações de iOS e Android que "pesam" mais em modelos antigos
+- Em 2017, a Apple admitiu reduzir o desempenho de iPhones via atualização
+- Aplicativos que param de funcionar em versões antigas do sistema
+
+PSICOLÓGICA: o produto funciona, mas parece velho
+- Novos modelos lançados todo ano com mudanças mínimas
+- Campanhas de marketing que fazem o modelo anterior parecer inferior
+- Mudanças de design que tornam acessórios antigos incompatíveis
+
+
+EXEMPLOS DO DIA A DIA:
+
+- Um celular de 3 anos fica lento, não por acidente, mas por design
+- A vida útil média de uma máquina de lavar caiu de 14 anos (anos 90) para 7 anos hoje
+- Geladeiras dos anos 70 ainda funcionam. As atuais duram em média 7 anos
+
+
+O IMPACTO AMBIENTAL:
+
+Cada ciclo de compra e descarte tem um custo:
+
+- Fabricar um smartphone consome 70 kg de materiais brutos e emite 70 kg de CO2
+- Metais pesados presentes nos eletrônicos contaminam solo e água por décadas
+- O lixo eletrônico representa 2% do lixo em aterros, mas 70% dos resíduos tóxicos
+
+
+É ILEGAL?
+
+Na França, desde 2015, é crime com pena de até 2 anos de prisão e multa de 300 mil euros. A União Europeia aprovou o "Direito ao Conserto" em 2021, obrigando fabricantes a disponibilizar peças por 10 anos. O Brasil ainda não tem lei específica sobre o tema.
+
+
+PÁGINA 3 - RECICLAGEM DE eletrônicos
+
+POR QUE eletrônicos PRECISAM DE RECICLAGEM ESPECIAL?
+
+Um celular contém mais de 60 elementos químicos, entre materiais valiosos que podem ser recuperados e substâncias tóxicas que contaminam o meio ambiente. Por isso, não pode ir para o lixo comum.
+
+
+O QUE TEM DENTRO DE UM CELULAR:
+
+Material         | Onde está          | Por que importa
+-----------------|--------------------|--------------------------------------------------
+Ouro             | Circuitos          | 1 tonelada de celulares tem 40x mais ouro que 1 tonelada de minério
+Cobalto e Lítio  | Bateria            | Reaproveitados em novas baterias
+Cobre            | Fios e placas      | 100% reciclável
+Alumínio         | Carcaça            | Reciclar usa 95% menos energia que produzir do zero
+Chumbo/Mercúrio  | Soldas e display   | Tóxicos — contaminam solo e água por décadas
+
+
+COMO FUNCIONA O PROCESSO:
+
+1. Coleta: aparelhos chegam pelos pontos de entrega
+2. Triagem: separados por tipo e avaliados (alguns ainda podem ser consertados)
+3. Desmontagem manual: baterias e componentes perigosos removidos com segurança
+4. Fragmentação: aparelhos triturados por máquinas industriais
+5. Separação de materiais: metais, plásticos e vidros separados por processos físicos e químicos
+6. Refino: metais purificados e devolvidos à cadeia produtiva
+
+
+RECICLAGEM VS. CONSERTO:
+
+Reciclar é bom. Mas consertar é sempre melhor. A ordem ideal é:
+
+1. Usar por mais tempo
+2. Reparar quando quebrar
+3. Reciclar quando não der mais
+4. Descartar adequadamente como última opção
+
+
+DADOS QUE MOSTRAM A DIFERENÇA:
+
+- Reciclar 1 milhão de celulares evita a extração de 34 kg de ouro e 16 toneladas de cobre
+- No Brasil, apenas 3% dos eletrônicos descartados passam por reciclagem formal
+
+
+PÁGINA 4 - COMO DESCARTAR
+
+
+Nunca jogue eletrônicos no lixo comum.
+
+Além do dano ambiental, é crime no Brasil. A Lei no 12.305/2010 proíbe o descarte de eletrônicos em lixo doméstico e em lixões. As penalidades incluem multa e responsabilidade por dano ambiental.
+
+
+ANTES DE DESCARTAR — PROTEJA SEUS DADOS:
+
+1. Faça backup do que quiser guardar
+2. Remova o chip SIM e o cartão de memória
+3. Faça o reset de fábrica (Configurações > Sistema > Apagar tudo)
+4. Desconecte sua conta Google ou Apple ID
+
+
+ONDE LEVAR:
+
+Pontos de coleta municipais
+Prefeituras de cidades como São Paulo e Rio de Janeiro mantêm Ecopontos e PEVs (Pontos de Entrega Voluntária). Consulte o site da sua prefeitura ou busque pelo CEP em greenelectron.org.br.
+
+Lojas e varejistas
+Por lei, lojas que vendem eletrônicos são obrigadas a receber de volta. Magazine Luiza, Casas Bahia, Fast Shop e grandes redes têm programas de coleta.
+
+Fabricantes
+- Apple: Programa Trade In (qualquer aparelho Apple)
+- Samsung: Programa Samsung Recicla (em assistências autorizadas)
+
+Assistências técnicas
+São obrigadas a receber aparelhos para encaminhamento. Boa opção para aparelhos que ainda podem ser consertados.
+
+Pilhas e baterias pequenas
+Supermercados, farmácias e papelarias geralmente têm coletores na entrada — mesmo em cidades sem ecoponto.
+
+
+O QUE PODE SER DESCARTADO:
+
+- Celulares, tablets, smartwatches
+- Notebooks, computadores, monitores
+- Impressoras e periféricos
+- Pilhas, baterias e carregadores
+- Videogames e controles
+- TVs e aparelhos de som
+- Eletrodomésticos pequenos
+
+
+SE O APARELHO AINDA FUNCIONA:
+
+Considere doação. ONGs como o CDI (cdi.org.br) trabalham com inclusão digital e recebem equipamentos usados. Escolas públicas e centros comunitários também costumam aceitar.
+
+
+PÁGINA 5 - SOBRE O PROJETO / CONTATO
+
+
+SOBRE:
+
+Este site foi desenvolvido por alunos da faculdade FUMEC como trabalho da disciplina de introdução programada web, com orientação do Professor Gilmar.
+
+O objetivo foi apresentar de forma acessível o tema: a obsolescência programada . Todo o conteúdo foi pesquisado e escrito pelos alunos com base em fontes confiáveis.
+
+
+A EQUIPE:
+
+(Repita este bloco para cada aluno)
+
+Nome: Tomás Costa e Glória, Nicolle Neiva, Matheus Nogueira e João Vitor Nogueira
+Responsável por:
+Frase:
+
+
+FONTES:
+
+- Global E-waste Monitor 2020 : ONU/ITU
+- Lei no 12.305/2010 : Política Nacional de Resíduos Sólidos
+- Green Eletron: greenelectron.org.br
+- ABREE — abree.org.br
+- Documentário: The Light Bulb Conspiracy (2010)
+- Documentário: The Story of Electronics, Annie Leonard
+
+
+CONTATO:
+
+
+
+
